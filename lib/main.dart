@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutterappwrite_tracker/appwrite/appwrite.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutterappwrite_tracker/dependencies.dart';
-import 'package:get_it/get_it.dart';
 
 void main() {
   initDependancies();
-  runApp(const MainApp());
+  runApp(const ProviderScope(child: MainApp()));
 }
 
 class MainApp extends StatelessWidget {
@@ -13,7 +12,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
     return const MaterialApp(
       home: Scaffold(
         body: Center(
