@@ -11,7 +11,6 @@ class Appwrite {
         .setProject('flutter-appwrite-tracker');
     account = Account(client);
   }
-
   Future<User?> createAccount(
       String name, String email, String password) async {
     try {
@@ -26,5 +25,4 @@ class Appwrite {
       return null;
     }
   }
-  
 }
