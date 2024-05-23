@@ -1,12 +1,10 @@
 import 'dart:convert';
-
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutterappwrite_tracker/appwrite/appwrite.dart';
-import 'package:flutterappwrite_tracker/features/signup/src/signup_screen.dart';
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
-
+import '../appwrite/appwrite.dart';
+import '../features/signup/src/signup_screen.dart';
 import '../pages/home_page.dart';
 
 final routerProvider = Provider<GoRouter>((reference) {
