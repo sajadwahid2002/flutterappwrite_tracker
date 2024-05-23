@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutterappwrite_tracker/dependencies.dart';
+import 'package:flutterappwrite_tracker/router/router.dart';
 
 void main() {
   initDependancies();
@@ -12,12 +13,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    return Consumer(builder: (context, reference, chlid) {
+      final router = reference.watch(routerProvider);
+
+      return MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        routerConfig: router,
+      );
+    });
   }
 }
